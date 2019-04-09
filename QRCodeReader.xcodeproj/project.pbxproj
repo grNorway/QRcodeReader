@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA20BE95225498A9006E6B0D /* CameraControllerQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20BE94225498A9006E6B0D /* CameraControllerQRCode.swift */; };
+		EAF078F02255E6E90007FA4D /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF078EF2255E6E90007FA4D /* CGRect+Extension.swift */; };
+		EAF078F222563B730007FA4D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF078F122563B730007FA4D /* UIView+Extensions.swift */; };
 		F4F09DB71DAF669400026BB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F09DB61DAF669400026BB2 /* AppDelegate.swift */; };
 		F4F09DBC1DAF669400026BB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBA1DAF669400026BB2 /* Main.storyboard */; };
 		F4F09DBE1DAF669400026BB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBD1DAF669400026BB2 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA20BE94225498A9006E6B0D /* CameraControllerQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControllerQRCode.swift; sourceTree = "<group>"; };
+		EAF078EF2255E6E90007FA4D /* CGRect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
+		EAF078F122563B730007FA4D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F4F09DB31DAF669400026BB2 /* QRCodeReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F09DB61DAF669400026BB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F09DBB1DAF669400026BB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,6 +43,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA8689BC225B82FD00833CF2 /* QRCodeScannerController */ = {
+			isa = PBXGroup;
+			children = (
+				F4F09DCA1DAF6A4F00026BB2 /* QRScannerController.swift */,
+				EA20BE94225498A9006E6B0D /* CameraControllerQRCode.swift */,
+			);
+			path = QRCodeScannerController;
+			sourceTree = "<group>";
+		};
+		EA8689BD225B831A00833CF2 /* QRCodeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4F09DC81DAF6A3800026BB2 /* QRCodeViewController.swift */,
+			);
+			path = QRCodeViewController;
+			sourceTree = "<group>";
+		};
+		EA8689BE225B833600833CF2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EA8689BD225B831A00833CF2 /* QRCodeViewController */,
+				EA8689BC225B82FD00833CF2 /* QRCodeScannerController */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EA8689BF225B834B00833CF2 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F4F09DBA1DAF669400026BB2 /* Main.storyboard */,
+				F4F09DBD1DAF669400026BB2 /* Assets.xcassets */,
+				F4F09DBF1DAF669400026BB2 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		EAF078EE2255E6D50007FA4D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EAF078EF2255E6E90007FA4D /* CGRect+Extension.swift */,
+				EAF078F122563B730007FA4D /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F4F09DAA1DAF669400026BB2 = {
 			isa = PBXGroup;
 			children = (
@@ -57,12 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				F4F09DB61DAF669400026BB2 /* AppDelegate.swift */,
-				F4F09DBA1DAF669400026BB2 /* Main.storyboard */,
-				F4F09DBD1DAF669400026BB2 /* Assets.xcassets */,
-				F4F09DBF1DAF669400026BB2 /* LaunchScreen.storyboard */,
+				EA8689BE225B833600833CF2 /* Modules */,
+				EAF078EE2255E6D50007FA4D /* Extensions */,
+				EA8689BF225B834B00833CF2 /* SupportingFiles */,
 				F4F09DC21DAF669400026BB2 /* Info.plist */,
-				F4F09DC81DAF6A3800026BB2 /* QRCodeViewController.swift */,
-				F4F09DCA1DAF6A4F00026BB2 /* QRScannerController.swift */,
 			);
 			path = QRCodeReader;
 			sourceTree = "<group>";
@@ -141,9 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF078F222563B730007FA4D /* UIView+Extensions.swift in Sources */,
 				F4F09DC91DAF6A3800026BB2 /* QRCodeViewController.swift in Sources */,
 				F4F09DB71DAF669400026BB2 /* AppDelegate.swift in Sources */,
+				EA20BE95225498A9006E6B0D /* CameraControllerQRCode.swift in Sources */,
 				F4F09DCB1DAF6A4F00026BB2 /* QRScannerController.swift in Sources */,
+				EAF078F02255E6E90007FA4D /* CGRect+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +341,7 @@
 				DEVELOPMENT_TEAM = DLFLF8ZQDD;
 				INFOPLIST_FILE = QRCodeReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.QRCodeReader;
+				PRODUCT_BUNDLE_IDENTIFIER = panos.QRCodeReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -302,7 +354,7 @@
 				DEVELOPMENT_TEAM = DLFLF8ZQDD;
 				INFOPLIST_FILE = QRCodeReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.QRCodeReader;
+				PRODUCT_BUNDLE_IDENTIFIER = panos.QRCodeReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
